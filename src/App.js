@@ -1,5 +1,6 @@
 
 
+
 import React, { useEffect, useState  } from 'react';
 import TweetCards from './TweetCards.js';
 import {Link, Switch, Route} from 'react-router-dom'
@@ -13,15 +14,15 @@ import  "./images/sky.png"
 
 
 
-
 import SearchBar from "./Components/Searchbar";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+// import Sky from "./images/sky.png"
 
-
-
-    
-
+import "./App.css";
 
 function App() {
+
 const [search, setSearch] = useState(null)
 const [input, setInput] = useState(null)
 
@@ -35,12 +36,16 @@ const [input, setInput] = useState(null)
 //         .catch((error) => console.log("ERROR"));
 //       }, []);
 
+
   //------End Search Fetch -----//
   return (
-<div>
-    <div> 
-     <h1> Hello World </h1>
+    <div className="mainFrame">
+      {/* <img src={Sky} alt ="sky"></img> */}
+      <Header />
+      {/* Aleja */}
+      <Link to="/userinfo">Userinfo</Link>
       <SearchBar search={search} input={input} />
+
 
     </div>
    <div> 
@@ -68,14 +73,25 @@ const [input, setInput] = useState(null)
       <div className="userInfo"></div>
       Yodit
       <div className="tweets"></div>
-      <Switch>
-        <Route path="/about">
-          <Footer />
-        </Route>
-      </Switch>
-    </div>
-</div>
 
+      <Switch>
+        {/* Staifo */}
+        <Route path="/users">
+          <UserInfoCard />
+        </Route>
+
+        {/* Yodit */}
+        <Route path="/messages">
+          <AllUserMessages />
+        </Route>
+        <TweetCards />
+      </Switch>
+
+      {/* Marcus */}
+      {/* <Route path="/about">
+        </Route> */}
+      <Footer />
+    </div>
   );
 }
 

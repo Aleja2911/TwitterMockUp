@@ -1,9 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./footer.css";
+import "./Footer.css";
 
 
-export default function footer(props, match) {
+function Footer (props) {
   const footerItems = [
     "About us",
     "Help",
@@ -14,18 +14,19 @@ export default function footer(props, match) {
 
 //   &copy;
   return (
-    <div>
+    <div className  = "main">
       {/* <Link to="/about">About</Link> */}
       <ul>
         {footerItems.map((item) => (
-          <li>
-              <Link key={item}>
+          <li key={item}>
+              <Link to={item}>
               {item}
               </Link>
-            </li>
-          
+            </li>    
         ))}
       </ul>
     </div>
   );
 }
+
+export default Footer
