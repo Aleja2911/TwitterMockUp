@@ -5,7 +5,7 @@ import TweetCards from './TweetCards.js';
 import {Link, Switch, Route} from 'react-router-dom'
 import UserInfoCard from './UserInfoCard'
 import AllUserMessages from './AllUserMessages'
-
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import './App.css';
 import Footer from "./components/footer";
