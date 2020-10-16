@@ -1,11 +1,33 @@
-import React from "react";
+
+import React from 'react';
+import {Link, Switch, Route} from 'react-router-dom'
+import UserInfoCard from './UserInfoCard'
+import AllUserMessages from './AllUserMessages'
+import './App.css';
+
 import Footer from "./components/footer";
 import  "./images/sky.png"
-import "./App.css";
-import { Route, Switch } from "react-router-dom";
+
+
+
 
 function App() {
   return (
+<div>
+   <div> 
+   <Link to='/userinfo'>Userinfo</Link>
+   <Switch>
+   <Route path="/userinfo">
+   <UserInfoCard />
+   </Route>
+   <Route path="/usermessages">
+   <AllUserMessages/>
+   </Route>
+   
+  </Switch>
+
+   </div>
+
     <div className="mainFrame">
       Aleja
       <div className="searchbar"></div>
@@ -19,6 +41,7 @@ function App() {
         </Route>
       </Switch>
     </div>
+</div>
   );
 }
 
