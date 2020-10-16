@@ -1,81 +1,56 @@
-
-
-import React, { useEffect, useState  } from 'react';
-import TweetCards from './TweetCards.js';
-import {Link, Switch, Route} from 'react-router-dom'
-import UserInfoCard from './UserInfoCard'
-import AllUserMessages from './AllUserMessages'
-
-
-import './App.css';
-import Footer from "./components/footer";
-import  "./images/sky.png"
-
-
-
-
+import React, { useEffect, useState } from "react";
+import TweetCards from "./TweetCards.js";
+import { Link, Switch, Route } from "react-router-dom";
+import UserInfoCard from "./UserInfoCard";
+import AllUserMessages from "./AllUserMessages";
 import SearchBar from "./Components/Searchbar";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
+// import Sky from "./images/sky.png"
 
-
-
-    
-
+import "./App.css";
 
 function App() {
-  const [search, setSearch] = useState(null)
-const [input, setInput] = useState(null)
+  const [search, setSearch] = useState(null);
+  const [input, setInput] = useState(null);
 
-// get all All (Searchbar) //
-useEffect(() => {
-  fetch('https://run.mocky.io/v3/773a3aa4-ac2c-4647-b086-2437d92c2cec')
-  .then(response => response.json())
-  .then((response) => {
-          setSearch(response.items);
-        })
-        .catch((error) => console.log("ERROR"));
-      }, []);
+  // get all All (Searchbar) //
+  useEffect(() => {
+    fetch("https://run.mocky.io/v3/773a3aa4-ac2c-4647-b086-2437d92c2cec")
+      .then((response) => response.json())
+      .then((response) => {
+        setSearch(response.items);
+      })
+      .catch((error) => console.log("ERROR"));
+  }, []);
 
   //------End Search Fetch -----//
   return (
-<div>
-    <div> 
-     <h1> Hello World </h1>
+    <div className="mainFrame">
+      {/* <img src={Sky} alt ="sky"></img> */}
+      <Header />
+      {/* Aleja */}
+      <Link to="/userinfo">Userinfo</Link>
       <SearchBar search={search} input={input} />
 
-    </div>
-   <div> 
-   <Link to='/userinfo'>Userinfo</Link>
-   <Switch>
-   <Route path="/userinfo">
-   <UserInfoCard />
-   </Route>
-   <Route path="/usermessages">
-   <AllUserMessages/>
-   </Route>
-   
-
-  <TweetCards/>
-
-  </Switch>
-
-
-   </div>
-
-    <div className="mainFrame">
-      Aleja
-      <div className="searchbar"></div>
-      Staifo
-      <div className="userInfo"></div>
-      Yodit
-      <div className="tweets"></div>
       <Switch>
-        <Route path="/about">
-          <Footer />
+        {/* Staifo */}
+        <Route path="/users">
+          <UserInfoCard />
         </Route>
-      </Switch>
-    </div>
-</div>
 
+        {/* Yodit */}
+        <Route path="/messages">
+          <AllUserMessages />
+        </Route>
+        <TweetCards />
+      </Switch>
+
+      {/* Marcus */}
+      {/* <Route path="/about">
+        </Route> */}
+      <Footer />
+    </div>
   );
 }
 

@@ -2,9 +2,13 @@
 .main-frame{
   display: flex;
   flex-direction: column;
+  background-image:url(/images/sky.png);
+  background-color: rgba(255,255,255,0.5);
 }
 
-.searchbar{
+
+
+/* .searchbar{
   border: 1px black solid;
   width: auto;
   height: 5vh;
@@ -18,5 +22,5 @@
   border: 1px black solid;
   width: auto;
   height: 73vh;
-}
+} */
 
