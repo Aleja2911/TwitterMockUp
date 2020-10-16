@@ -10,21 +10,21 @@ const TweetCards = ()=>{
                     username: 'elli',
                     email: 'elli@whatever.com',
                     password: 'somePassword1',
-                    profilePic: "./elephant.png"
+                    profile_pic: "./elephant.png"
                     },
                     {
                     id: 2,
                     username: 'moni',
                     email: 'moni@whatever.com',
                     password: 'somePassword2',
-                    profilePic: './monkey.png'
+                    profile_pic: './monkey.png'
                     },
                     {
                         id: 3,
                         username: 'gigi',
                         email: 'gigi@whatever.com',
                         password: 'somePassword3',
-                        profilePic: './giraffe.png'
+                        profile_pic: './giraffe.png'
                     }],
             tweets: [{
                     id: 1,
@@ -33,7 +33,7 @@ const TweetCards = ()=>{
                     timeStamp: '01/01/2020',
                     likes: 1,
                     user_id: 1,
-                    profilePic: './elephant.png'
+                    profile_pic: './elephant.png'
                     },
                     {
                     id: 1,
