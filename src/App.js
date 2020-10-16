@@ -8,7 +8,7 @@ import AllUserMessages from './AllUserMessages'
 
 
 import './App.css';
-import Footer from "./components/footer";
+import Footer from "./Components/footer";
 import  "./images/sky.png"
 
 
@@ -22,18 +22,18 @@ import SearchBar from "./Components/Searchbar";
 
 
 function App() {
-  const [search, setSearch] = useState(null)
+const [search, setSearch] = useState(null)
 const [input, setInput] = useState(null)
 
 // get all All (Searchbar) //
-useEffect(() => {
-  fetch('https://run.mocky.io/v3/773a3aa4-ac2c-4647-b086-2437d92c2cec')
-  .then(response => response.json())
-  .then((response) => {
-          setSearch(response.items);
-        })
-        .catch((error) => console.log("ERROR"));
-      }, []);
+// useEffect(() => {
+//   fetch('')
+//   .then(response => response.json())
+//   .then((response) => {
+//           setSearch(response.messages);
+//         })
+//         .catch((error) => console.log("ERROR"));
+//       }, []);
 
   //------End Search Fetch -----//
   return (
@@ -44,13 +44,13 @@ useEffect(() => {
 
     </div>
    <div> 
-   <Link to='/userinfo'>Userinfo</Link>
+    <Link to='/userinfo'>Userinfo</Link>
    <Switch>
    <Route path="/userinfo">
-   <UserInfoCard />
+    <UserInfoCard />
    </Route>
-   <Route path="/usermessages">
-   <AllUserMessages/>
+  <Route path="/usermessages">
+     <AllUserMessages/>
    </Route>
    
 
