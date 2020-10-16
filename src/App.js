@@ -1,16 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Footer from "./components/footer";
+import  "./images/sky.png"
+import "./App.css";
+import { Route, Switch } from "react-router-dom";
 
 function App() {
-
-  
   return (
-   <div> 
-   
-  
-
-   </div>
+    <div className="mainFrame">
+      Aleja
+      <div className="searchbar"></div>
+      Staifo
+      <div className="userInfo"></div>
+      Yodit
+      <div className="tweets"></div>
+      <Switch>
+        <Route path="/about">
+          <Footer />
+        </Route>
+      </Switch>
+    </div>
   );
 }
 
