@@ -1,0 +1,10 @@
+footer {
+    width: auto;
+    /* border: 1px red solid */
+}
+
+ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+}
