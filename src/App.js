@@ -1,10 +1,11 @@
 
 import React from 'react';
+import TweetCards from './TweetCards.js';
 import {Link, Switch, Route} from 'react-router-dom'
 import UserInfoCard from './UserInfoCard'
 import AllUserMessages from './AllUserMessages'
-import './App.css';
 
+import './App.css';
 import Footer from "./components/footer";
 import  "./images/sky.png"
 
@@ -24,7 +25,11 @@ function App() {
    <AllUserMessages/>
    </Route>
    
+
+  <TweetCards/>
+
   </Switch>
+
 
    </div>
 
