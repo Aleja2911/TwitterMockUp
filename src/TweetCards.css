@@ -3,3 +3,24 @@
     width: 33%;
     margin: auto;
 }
+
+.userIcon{
+    width: 100px;
+}
+
+.tweetCard {
+    height: 100%;
+    width: 10%;
+    margin: 10px;
+    border: 1px solid black;
+}
+.tweetImage{
+    width: 100%;
+    height: 100%; 
+}
+
+.tweetText{
+    height: 50%;
+    width: 100%;
+}
+
