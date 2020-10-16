@@ -23,7 +23,7 @@ const TweetCards = ()=>{
                 {
                 "tweet_id": 2,
                 "user_id": 1,
-                "tweet_text": "\"I want to thank all of you for your prayers.\"",
+                "tweet_text": "I want to thank all of you for your prayers.",
                 "tweet_image": "",
                 "time_stamp": "10. Okt",
                 "likes": "1450"
@@ -35,7 +35,40 @@ const TweetCards = ()=>{
                 "tweet_image": "",
                 "time_stamp": "12. Okt",
                 "likes": "1583"
-                }
+                },
+                {
+                "tweet_id": 4,
+                "user_id": 2,
+                "tweet_text": "It is inspiring to see youth across the country proud to share their commitment to living drug-free. Use the hashtag #BeDrugFree & share how you’re positively impacting your community!",
+                "tweet_image": " ",
+                "time_stamp": "11. Okt.",
+                "likes": "2541"
+                },
+                {
+                "tweet_id": 5,
+                "user_id": 2,
+                "tweet_text": " This week I am highlighting the work of \r\n@DrugFreeCecil\r\n in MD & what they are doing to #BeDrugFree. Throughout #COVID19 they creatively added an at-home drug disposal kit to bags of food they packaged & delivered to over 400 families in need.",
+                "tweet_image": "https://pbs.twimg.com/media/EkYaEU_WsAAwXWT?format=jpg&name=large",
+                "time_stamp": " 08. Okt.",
+                "likes": "1245"
+                },
+                {
+                "tweet_id": 6,
+                "user_id": 2,
+                "tweet_text": "To all who have reached out - thank you. Here is my personal experience with COVID-19",
+                "tweet_image": " ",
+                "time_stamp": "05. Okt.",
+                "likes": "3457"
+                },
+                {
+                "tweet_id": 8,
+                "user_id": 3,
+                "tweet_text": " Developing and manufacturing vaccines won’t end the pandemic quickly unless we also deliver them equitably. Here is why it’s critical that vaccines are distributed in proportion to the global population",
+                "tweetimage": "https://pbs.twimg.com/media/EjBVzcaUcAAmzw?format=jpg&name=4096x4096",
+                "time_stamp": " 07. Okt.",
+                "likes": "3487"
+                },
+                
                 ]
     };
 
