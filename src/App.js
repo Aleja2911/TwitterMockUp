@@ -1,13 +1,19 @@
+
 import React from 'react';
 import {Link, Switch, Route} from 'react-router-dom'
 import UserInfoCard from './UserInfoCard'
 import AllUserMessages from './AllUserMessages'
 import './App.css';
 
-function App() {
+import Footer from "./components/footer";
+import  "./images/sky.png"
 
-  
+
+
+
+function App() {
   return (
+<div>
    <div> 
    <Link to='/userinfo'>Userinfo</Link>
    <Switch>
@@ -21,6 +27,21 @@ function App() {
   </Switch>
 
    </div>
+
+    <div className="mainFrame">
+      Aleja
+      <div className="searchbar"></div>
+      Staifo
+      <div className="userInfo"></div>
+      Yodit
+      <div className="tweets"></div>
+      <Switch>
+        <Route path="/about">
+          <Footer />
+        </Route>
+      </Switch>
+    </div>
+</div>
   );
 }
 
