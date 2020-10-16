@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from './logo.svg';
+import TweetCards from './TweetCards.js';
+
 import './App.css';
 
 function App() {
@@ -8,7 +9,7 @@ function App() {
   return (
    <div> 
    
-  
+  <TweetCards/>
 
    </div>
   );
